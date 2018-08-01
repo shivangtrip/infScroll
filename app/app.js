@@ -13,6 +13,16 @@ App = Ember.Application.extend({
   Resolver
 });
 
+
+
+Ember.$('#pingpong').on('scroll', function() {
+  if(Ember.$(this).scrollTop() + Ember.$(this).innerHeight() >= Ember.$(this)[0].scrollHeight) {
+      alert('end reached');
+  }
+})
+
+
+
 loadInitializers(App, config.modulePrefix);
 
 export default App;
